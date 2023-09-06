@@ -1,30 +1,31 @@
+$pip install numpy, pandas 
 import numpy as np
 import pandas as pd
-import os
-import time
-import matplotlib.pyplot as plt
+#import os
+#import time
+#import matplotlib.pyplot as plt
 import cv2
-import seaborn as sns
-sns.set_style('darkgrid')
-import shutil
-from sklearn.metrics import confusion_matrix, classification_report
-from sklearn.model_selection import train_test_split
+#import seaborn as sns
+#sns.set_style('darkgrid')
+#import shutil
+#from sklearn.metrics import confusion_matrix, classification_report
+#from sklearn.model_selection import train_test_split
 import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.layers import MaxPool2D
-from tensorflow.keras.layers import Dense, Activation,Dropout,Conv2D, MaxPooling2D,BatchNormalization,Flatten
-from tensorflow.keras.optimizers import Adam,Adamax,RMSprop,SGD
-from tensorflow.keras.metrics import categorical_crossentropy
-from tensorflow.keras import regularizers
-from tensorflow.keras.models import Model
-from tensorflow.keras import models, layers, regularizers
-from tensorflow.keras.models import Sequential ,Model
-from tensorflow.keras.utils import to_categorical, plot_model
-from tensorflow.keras import layers
+#from tensorflow import keras
+#from tensorflow.keras.preprocessing.image import ImageDataGenerator
+#from tensorflow.keras.layers import MaxPool2D
+#from tensorflow.keras.layers import Dense, Activation,Dropout,Conv2D, MaxPooling2D,BatchNormalization,Flatten
+#from tensorflow.keras.optimizers import Adam,Adamax,RMSprop,SGD
+#from tensorflow.keras.metrics import categorical_crossentropy
+#from tensorflow.keras import regularizers
+#from tensorflow.keras.models import Model
+#from tensorflow.keras import models, layers, regularizers
+#from tensorflow.keras.models import Sequential ,Model
+#from tensorflow.keras.utils import to_categorical, plot_model
+#from tensorflow.keras import layers
 import os
 from tensorflow.keras.models import load_model
-import csv
+#import csv
 from PIL import Image
 
 print("working dir:"+os.getcwd())
@@ -86,7 +87,7 @@ def load_and_prep_image(filename, img_shape = 48):
         roi_GrayImg = GrayImg[ y: y + h , x: x + w ]
         roi_Img = img[ y: y + h , x: x + w ]
         cv2.rectangle(img, (x,y), (x+w, y+h), (0, 255, 0), 2)
-        plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY))
+        #plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY))
         faces = faceCascade.detectMultiScale(roi_Img, 1.1, 4)
         if len(faces) == 0:
             print("No Faces Detected")
