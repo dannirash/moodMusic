@@ -1,16 +1,18 @@
-$pip install numpy, pandas 
 import numpy as np
 import pandas as pd
+import cv2
+import tensorflow as tf
+import os
+from tensorflow.keras.models import load_model
+from PIL import Image
 #import os
 #import time
 #import matplotlib.pyplot as plt
-import cv2
 #import seaborn as sns
 #sns.set_style('darkgrid')
 #import shutil
 #from sklearn.metrics import confusion_matrix, classification_report
 #from sklearn.model_selection import train_test_split
-import tensorflow as tf
 #from tensorflow import keras
 #from tensorflow.keras.preprocessing.image import ImageDataGenerator
 #from tensorflow.keras.layers import MaxPool2D
@@ -23,10 +25,7 @@ import tensorflow as tf
 #from tensorflow.keras.models import Sequential ,Model
 #from tensorflow.keras.utils import to_categorical, plot_model
 #from tensorflow.keras import layers
-import os
-from tensorflow.keras.models import load_model
 #import csv
-from PIL import Image
 
 print("working dir:"+os.getcwd())
 script_dir = os.path.dirname(os.path.abspath(__file__))
